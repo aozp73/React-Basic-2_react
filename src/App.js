@@ -1,25 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+let a = 10;
+const mystyle = {
+  color: 'red',
+};
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div className="box-style">안녕 {a === 10 && '10입니다.'}</div>;
 }
 
 export default App;
