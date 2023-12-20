@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log('======= 1. 스프레드 연산자 ========');
+      const a = [1, 2, 3];
+      const b = [...a];
+      b.push(4);
+      console.log(`a 값: ${a}`);
+      console.log(`b 값: ${b}`);
+
+      console.log('======= 2. concat ========');
+      const a2 = [1, 2, 3];
+      const b2 = a2.concat(4);
+      console.log(`a2 값: ${a2}`);
+      console.log(`b2 값: ${b2}`);
+      const c2 = [...a, 5];
+      console.log(`c2 값: ${c2}`);
+
+      console.log('======= 3. filter ========');
+      const a3 = [1, 2, 3];
+      const b3 = a3.filter((n) => {
+        return n != 1;
+      });
+      console.log(`b3 값: ${b3}`);
+
+      console.log('======= 4. slice ========');
+      const a4 = [1, 2, 3];
+      const b4 = a4.slice(0, 2);
+      console.log(`b4 값: ${b4}`);
+      const c4 = [...a4.slice(0, 2), 4, ...a4.slice(2, 3)];
+      console.log(`c4 값: ${c4}`);
+
+      console.log('======= 5. map ========');
+      const a5 = [1, 2, 3];
+      const b5 = a5.map((n) => n + 3); // (=) const b5 = [...a5];
+      console.log(`b5 값: ${b5}`);
+    </script>
+  </body>
+</html>
