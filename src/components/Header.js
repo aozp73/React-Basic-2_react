@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeaderList = styled.div`
+const StyledHeaderDiv = styled.div`
   border: 1px solid black;
   height: 100px;
 `;
@@ -8,12 +8,12 @@ const HeaderList = styled.div`
 const Header = () => {
   return (
     <div>
-      <HeaderList>
+      <StyledHeaderDiv>
         <ul>
           <li>메뉴 1</li>
           <li>메뉴 2</li>
         </ul>
-      </HeaderList>
+      </StyledHeaderDiv>
     </div>
   );
 };
