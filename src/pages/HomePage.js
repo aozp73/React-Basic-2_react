@@ -1,5 +1,3 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Home from '../components/home/Home';
 import { useEffect, useState } from 'react';
 
@@ -20,9 +18,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header />
       <Home boards={boards} setBoards={setBoards} user={user} />
-      <Footer />
     </div>
   );
 };

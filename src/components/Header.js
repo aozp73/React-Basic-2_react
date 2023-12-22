@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import styled from 'styled-components';
 
 const StyledHeaderDiv = styled.div`
@@ -6,13 +7,21 @@ const StyledHeaderDiv = styled.div`
   background-color: ${(props) => props.backgroudColor};
 `;
 
+const StyledHeaderLink = styled(Link)`
+  color: red;
+`;
+
 const Header = () => {
   return (
     <div>
       <StyledHeaderDiv backgroudColor="lightgray">
         <ul>
-          <li>메뉴 1</li>
-          <li>메뉴 2</li>
+          <li>
+            <StyledHeaderLink to="/">홈</StyledHeaderLink>
+          </li>
+          <li>
+            <StyledHeaderLink to="/login/10">로그인</StyledHeaderLink>
+          </li>
         </ul>
       </StyledHeaderDiv>
     </div>
