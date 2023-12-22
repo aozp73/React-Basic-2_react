@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 const HomePage = () => {
   const [boards, setBoards] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     // 다운로드 (fetch / axios)
@@ -14,12 +15,13 @@ const HomePage = () => {
       { id: 3, title: '제목3', content: '내용3' },
     ];
     setBoards([...datas]);
+    setUser({ id: 1, username: 'ssar' });
   }, []);
 
   return (
     <div>
       <Header />
-      <Home boards={boards} setBoards={setBoards} />
+      <Home boards={boards} setBoards={setBoards} user={user} />
       <Footer />
     </div>
   );
